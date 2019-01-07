@@ -24,10 +24,9 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
       var notAddr = false;
       // non standard input
       if (items[i].scriptSig && !items[i].addr) {
-        //items[i].addr = 'Unparsed address [' + u++ + ']';
-        //items[i].notAddr = true;
-        //notAddr = true;
-        items[i].add = items[i].txid
+        items[i].addr = 'Unparsed address [' + u++ + ']';
+        items[i].notAddr = true;
+        notAddr = true;
       }
 
       // non standard output
