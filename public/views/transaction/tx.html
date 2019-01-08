@@ -366,7 +366,7 @@
                 </span>
               </div>
               <div class="ellipsis">
-                <span data-ng-show="address == 'import' || addreess.includes('EXPORT-')" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
+                <span data-ng-show="address == 'import' || addreess.includes('EXPORT-')" data-ng-repeat="address in vout.addr.split(',')">{{address}}</span>
                 <a href="address/{{address}}"  data-ng-show="!vout.notAddr && address != $root.currentAddr && address != 'import' && !address.includes('EXPORT-')" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</a>
               </div>
             </div>
